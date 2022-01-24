@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .htaccess
 css.php
 rpc/
@@ -9,3 +10,8 @@ sites/site*/public/theme/
 textpattern/
 HISTORY.txt
 README.txt
+=======
+venv/*
+pypi_token.txt
+>>>>>>> 6b705b8 (Initialized repository.)
+venv/*
