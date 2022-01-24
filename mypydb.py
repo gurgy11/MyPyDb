@@ -25,3 +25,20 @@ print("\nUsers:", users_sql)
 categories_table = CategoriesTable('categories')
 categories_sql = categories_table.get_create_table_sql()
 print("\nCategories:", categories_sql)
+
+
+''' Payments Table '''
+id_col = IdColumn()
+customer_id_col = IntColumn('customer_id')
+payment_type_col = VarcharColumn('payment_type', length=45, nullable=False)
+details_col = TextColumn('details')
+created_by_id_col = CreatedByIdColumn()
+created_at_col = CreatedAtColumn()
+updated_at_col = UpdatedAtColumn()
+
+table = Table('payments')
+payments_columns = [id_col, customer_id_col, payment_type_col, details_col, created_by_id_col, created_at_col, updated_at_col]
+table.set_columns(payments_columns)
+payments_table_sql = table.get_create_table_sql()
+
+print(payments_table_sql)
