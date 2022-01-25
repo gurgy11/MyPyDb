@@ -9,7 +9,15 @@ class Table():
         self.if_not_exists = if_not_exists
         self.has_create_by_id = has_create_by_id
         self.columns = []
-        self.set_table_columns()
+        # self.set_table_columns()
+    
+    def get_columns(self):
+        return self.columns
+    
+    def set_columns(self, columns):
+        self.columns.clear()
+        for column in columns:
+            self.columns.append(column.__str__())
     
     def set_table_columns(self):
         ''' Sets the columns for the table '''
